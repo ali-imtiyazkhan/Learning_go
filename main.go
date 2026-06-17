@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 func main() {
 
@@ -15,11 +19,11 @@ func main() {
 
 	fmt.Println("Get your tickets now")
 
-	var userName string
 	// asking user for their name
-
+	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Println("Enter Your name")
-	fmt.Scan(&userName)
+	scanner.Scan()
+	userName := scanner.Text()
 
 	println("Hello", userName)
 
