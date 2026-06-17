@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	var name string
@@ -14,7 +17,7 @@ func main() {
 	fmt.Println("Enter your age :")
 	fmt.Scan(&age)
 
-	if name == "" || len(name) < 2 || email == "" || age == 0 || age > 18 {
+	if name == "" || len(name) < 2 || email == "" || !strings.Contains("@", email) || age == 0 || age < 18 {
 		fmt.Println("Please correctly  filled  all the fields")
 	} else {
 		fmt.Println("Name : ", name)
