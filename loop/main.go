@@ -36,4 +36,38 @@ func main() {
 		}
 		fmt.Println("the number is :", i)
 	}
+
+	// continue: skip even numbers
+	fmt.Println("Odd numbers:")
+	for i := 1; i <= 10; i++ {
+		if i%2 == 0 {
+			continue
+		}
+		fmt.Print(i, " ")
+	}
+	fmt.Println()
+
+	// break with label (break outer loop)
+	fmt.Println("Labeled break:")
+outer:
+	for i := 1; i <= 3; i++ {
+		for j := 1; j <= 3; j++ {
+			if i == 2 && j == 2 {
+				break outer
+			}
+			fmt.Printf("i=%d j=%d\n", i, j)
+		}
+	}
+
+	// continue with label
+	fmt.Println("Labeled continue:")
+outer2:
+	for i := 1; i <= 3; i++ {
+		for j := 1; j <= 3; j++ {
+			if j == 2 {
+				continue outer2
+			}
+			fmt.Printf("i=%d j=%d\n", i, j)
+		}
+	}
 }
