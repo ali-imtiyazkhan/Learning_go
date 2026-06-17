@@ -9,7 +9,7 @@ func main() {
 	var num int
 	fmt.Scan(&num)
 
-	switch num {
+	switch num { 
 	case 1:
 		fmt.Println("Sunday")
 	case 2:
