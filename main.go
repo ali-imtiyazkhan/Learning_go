@@ -10,12 +10,16 @@ func main() {
 
 	fmt.Println("Hello World")
 
-	var confreneceName = "Go Conference"
+	confreneceName := "Go Conference"
 	const confreneceTickets = 50
-	var remainingTickets = confreneceTickets
-
+	remainingTickets := confreneceTickets
+	
 	fmt.Println("welcome to", confreneceName, "booking application")
 	fmt.Println("Number of tickets available :", remainingTickets)
+
+	fmt.Printf("confrenceName is type %T\n", confreneceName)
+	fmt.Printf("conreneceTickets is type %T\n", confreneceTickets)
+	fmt.Printf("remainingTickets is type %T\n", remainingTickets)
 
 	fmt.Println("Get your tickets now")
 
