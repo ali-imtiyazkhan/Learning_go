@@ -1,10 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 
 	sayHello()
+
+	firstName := getFirstName("Imtiyaz Khan")
+	fmt.Println("your first name is : ", firstName)
 
 	var a int
 	fmt.Println("Enter the value of a ")
@@ -16,9 +22,9 @@ func main() {
 
 	fmt.Scan(&b)
 
-	var Sum = getSum(a,b)
+	var Sum = getSum(a, b)
 
-	fmt.Println("The sum of ",a,"and",b,"is ",Sum)
+	fmt.Println("The sum of ", a, "and", b, "is ", Sum)
 
 	age := getTheUserAge()
 	fmt.Println("Your age is : ", age)
@@ -42,6 +48,11 @@ func getTheUserAge() int {
 	return age
 }
 
-func getSum(a int,b int) int {
+func getSum(a int, b int) int {
 	return a + b
+}
+
+func getFirstName(fullname string) string {
+	firstname := strings.Split(fullname, " ")
+	return firstname[0]
 }
