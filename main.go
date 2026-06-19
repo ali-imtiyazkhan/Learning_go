@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Go_learning/healper"
 	"bufio"
 	"fmt"
 	"os"
@@ -10,10 +11,12 @@ func main() {
 
 	fmt.Println("Hello World")
 
+	healper.Helper()
+
 	confreneceName := "Go Conference"
 	const confreneceTickets = 50
 	remainingTickets := confreneceTickets
-	
+
 	fmt.Println("welcome to", confreneceName, "booking application")
 	fmt.Println("Number of tickets available :", remainingTickets)
 
